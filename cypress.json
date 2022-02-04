@@ -1,4 +1,5 @@
 {
+    
     "baseUrl" : "https://react-redux.realworld.io",
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
@@ -9,6 +10,7 @@
             "overwrite": false,
             "html": false,
             "json": true
+    
         }
     }
 }
