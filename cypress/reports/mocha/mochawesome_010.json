@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-04T18:17:45.027Z",
+    "end": "2022-02-04T18:17:45.543Z",
+    "duration": 516,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f4bfe42d-1964-4820-9276-1c8fa5d3f8b7",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite/tc08_rwFiles-spec.js",
+      "file": "cypress/integration/testSuite/tc08_rwFiles-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6dcb9128-e450-404d-9d2f-d5a5eb7fb8c9",
+          "title": "Read &Write files",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test01: Write to a text file",
+              "fullTitle": "Read &Write files test01: Write to a text file",
+              "timedOut": null,
+              "duration": 231,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('rwFile.txt', 'Im Manjunatha - '); // writeFile to write, have to specify file extension\ncy.writeFile('rwFile.txt', 'Test automation by Cypress\\n', {\n  flag: 'a+'\n}); // flag to append content to the file\ncy.writeFile('rwFile.txt', '\\n Cypress Project Setup', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.txt', ':\\n', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.txt', '\\n 1.Install Nodejs\\n 2.Install IDE - Visual Studio Code\\n 3.Open the project folder in VS Code\\n 4.Setup npm package(npm init -y)\\n 5.Install Cypress(npm install Cypress)\\n 6.Open Cypress(npx Cypress open)\\n', {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "044953f3-8946-4904-92d4-b68c414adaf4",
+              "parentUUID": "6dcb9128-e450-404d-9d2f-d5a5eb7fb8c9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test02: Read from a text file",
+              "fullTitle": "Read &Write files test02: Read from a text file",
+              "timedOut": null,
+              "duration": 51,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('rwFile.txt').should('contains', 'Manjunatha'); //readFile to read file,  have to specify file extension",
+              "err": {},
+              "uuid": "e7d0bf71-e0c8-482a-9ec1-29ae8d30f5da",
+              "parentUUID": "6dcb9128-e450-404d-9d2f-d5a5eb7fb8c9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test03: Write to a pdf file",
+              "fullTitle": "Read &Write files test03: Write to a pdf file",
+              "timedOut": null,
+              "duration": 86,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('rwFile.pdf', 'Im Manjunatha - ');\ncy.writeFile('rwFile.pdf', 'Test automation by Cypress\\n', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.pdf', '\\n Cypress Project Setup', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.pdf', ':\\n', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.pdf', '\\n 1.Install Nodejs\\n 2.Install IDE - Visual Studio Code\\n 3.Open the project folder in VS Code\\n 4.Setup npm package(npm init -y)\\n 5.Install Cypress(npm install Cypress)\\n 6.Open Cypress(npx Cypress open)\\n', {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "49a1b9eb-f8d1-4565-a082-83b482714aa5",
+              "parentUUID": "6dcb9128-e450-404d-9d2f-d5a5eb7fb8c9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test04: Write to a word doc file",
+              "fullTitle": "Read &Write files test04: Write to a word doc file",
+              "timedOut": null,
+              "duration": 70,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.writeFile('rwFile.docx', 'Im Manjunatha - ');\ncy.writeFile('rwFile.docx', 'Test automation by Cypress\\n', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.docx', '\\n Cypress Project Setup', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.docx', ':\\n', {\n  flag: 'a+'\n});\ncy.writeFile('rwFile.docx', '\\n 1.Install Nodejs\\n 2.Install IDE - Visual Studio Code\\n 3.Open the project folder in VS Code\\n 4.Setup npm package(npm init -y)\\n 5.Install Cypress(npm install Cypress)\\n 6.Open Cypress(npx Cypress open)\\n', {\n  flag: 'a+'\n});",
+              "err": {},
+              "uuid": "3fbd5ed2-0348-4cbb-97e3-c410aa6ec11b",
+              "parentUUID": "6dcb9128-e450-404d-9d2f-d5a5eb7fb8c9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "044953f3-8946-4904-92d4-b68c414adaf4",
+            "e7d0bf71-e0c8-482a-9ec1-29ae8d30f5da",
+            "49a1b9eb-f8d1-4565-a082-83b482714aa5",
+            "3fbd5ed2-0348-4cbb-97e3-c410aa6ec11b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

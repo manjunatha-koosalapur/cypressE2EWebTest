@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
+    "suites": 0,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-02-03T11:28:24.455Z",
-    "end": "2022-02-03T11:28:36.979Z",
-    "duration": 12524,
+    "failures": 1,
+    "start": "2022-02-04T18:15:48.831Z",
+    "end": "2022-02-04T18:15:49.092Z",
+    "duration": 261,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,61 +18,46 @@
   },
   "results": [
     {
-      "uuid": "5827201b-bd64-4ef9-9748-b710ce3b1657",
+      "uuid": "eb519466-74b1-43cd-b231-ba8f19009566",
       "title": "",
-      "fullFile": "cypress/integration/login.feature",
-      "file": "cypress/integration/login.feature",
+      "fullFile": "cypress/integration/login/login.js",
+      "file": "cypress/integration/login/login.js",
       "beforeHooks": [],
       "afterHooks": [],
-      "tests": [],
-      "suites": [
+      "tests": [
         {
-          "uuid": "a934f8af-bdf6-4cfb-835d-473492879694",
-          "title": "Login",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Conduit Login",
-              "fullTitle": "Login Conduit Login",
-              "timedOut": null,
-              "duration": 12451,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {},
-              "uuid": "a1fcabfa-e898-4d26-bfd3-6cb6c558c796",
-              "parentUUID": "a934f8af-bdf6-4cfb-835d-473492879694",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "a1fcabfa-e898-4d26-bfd3-6cb6c558c796"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 12451,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 203,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > Given is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > Given is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object.1 (https://react-redux.realworld.io/__cypress/tests?p=cypress\\integration\\login\\login.js:4:1)\n    at o (https://react-redux.realworld.io/__cypress/tests?p=cypress\\integration\\login\\login.js:1:265)\n    at r (https://react-redux.realworld.io/__cypress/tests?p=cypress\\integration\\login\\login.js:1:431)\n    at eval (https://react-redux.realworld.io/__cypress/tests?p=cypress\\integration\\login\\login.js:1:460)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "94069bac-3aca-4202-803f-31b3ea171378",
+          "parentUUID": "eb519466-74b1-43cd-b231-ba8f19009566",
+          "isHook": false,
+          "skipped": false
         }
       ],
+      "suites": [],
       "passes": [],
-      "failures": [],
+      "failures": [
+        "94069bac-3aca-4202-803f-31b3ea171378"
+      ],
       "pending": [],
       "skipped": [],
-      "duration": 0,
+      "duration": 203,
       "root": true,
-      "rootEmpty": true,
+      "rootEmpty": false,
       "_timeout": 2000
     }
   ],
