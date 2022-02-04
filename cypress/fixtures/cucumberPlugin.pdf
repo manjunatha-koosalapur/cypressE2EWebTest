@@ -1,0 +1,21 @@
+1. Install the cucumber plugin > npm install --save-dev cypress-cucumber-preprocessor
+2. Cypress Configuration, add this section to plugins > cypress/plugins/index.js
+        const cucumber = require('cypress-cucumber-preprocessor').default
+        module.exports = (on, config) => {
+        on('file:preprocessor', cucumber())
+        }
+3. Add support for feature files to Cypress configuration > cypress.json
+        {
+        "testFiles": "**/*.feature"  //** by this we can run only .feature file tests **//
+        }
+4. Cucumber Configuration, add this section to package.json
+        "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+        }
+
+We can group our tests into sets using tags, to run tagged tests, for example
+npx cypress-tags run -e TAGS='@sanityTest'
+npx cypress-tags run -e TAGS='@smokeTest'
+npx cypress-tags run -e TAGS='@unitTests'
+npx cypress-tags run -e TAGS='@e2eTests'
+npx cypress-tags run -e TAGS='@integrationTests'

@@ -1,0 +1,10 @@
+Im Manjunatha - Test automation by Cypress
+
+ Cypress Project Setup:
+
+ 1.Install Nodejs
+ 2.Install IDE - Visual Studio Code
+ 3.Open the project folder in VS Code
+ 4.Setup npm package(npm init -y)
+ 5.Install Cypress(npm install Cypress)
+ 6.Open Cypress(npx Cypress open)

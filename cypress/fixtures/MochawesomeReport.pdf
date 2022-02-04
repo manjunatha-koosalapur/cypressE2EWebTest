@@ -1,0 +1,34 @@
+//Mocha for reports
+install mocha  > npm install mocha --save-dev
+
+//To generate a report for junit and perhaps a json report
+install cypress multi reporters > npm install cypress-multi-reporters --save-dev
+
+//Install mochawesome dependencies
+install mochawesome > npm install mochawesome --save-dev
+
+install mochawesome-merge > npm install mochawesome-merge --save-dev
+
+install mochawesome report-generator > npm install mochawesome-report-generator --save-dev
+
+OR in single command install all
+npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+
+
+Configuartions in Package.json
+1. "clean:reports": Configured to clear mocha reports before running test every time
+2. "pretest": Clean report folder (Pre-hook)
+3. "combine-reports": To merge all the json files from mochawesome-report directory  
+4. "generate-report": To generate the html report from cypress-tests-report.json
+5. "posttest": To combine all the .json files present in report folder and generate html report(Post-hook)
+6. "test": To run test suites and view report > npm run test
+
+scripts": {
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run combine-reports && npm run generate-report",
+    "test": "npm run scripts || npm run posttest"
+    }

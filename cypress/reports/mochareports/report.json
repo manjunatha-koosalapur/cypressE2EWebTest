@@ -1,0 +1,415 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 3,
+    "pending": 6,
+    "failures": 0,
+    "start": "2022-02-03T08:45:00.301Z",
+    "end": "2022-02-03T08:45:51.460Z",
+    "duration": 19382,
+    "testsRegistered": 9,
+    "passPercent": 33.333333333333336,
+    "pendingPercent": 66.66666666666667,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "27534d98-2bdb-45b3-9df3-8fdfca82b572",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite01/tc02-spec.js",
+      "file": "cypress/integration/testSuite01/tc02-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5314c24d-8233-48e0-9b0f-b7a713f22a4a",
+          "title": "Create and mark-unmark as favorite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Create and mark-unmark as favorite Sign in",
+              "timedOut": null,
+              "duration": 7769,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://react-redux.realworld.io/#/login');\ncy.title().should('eq', 'Conduit');\ncy.location('protocol').should('eq', 'https:');\ncy.get('input[type=\"email\"]').type('manjunatha2207@gmail.com');\ncy.get('input[type=\"password\"]').type('Cypress@1234');\ncy.get('.btn').contains('Sign in').should('be.visible').click();\ncy.contains('Your Feed', {\n  timeout: 10000\n}).should('be.visible');",
+              "err": {},
+              "uuid": "570388a9-2921-4e12-b647-1b0babd08409",
+              "parentUUID": "5314c24d-8233-48e0-9b0f-b7a713f22a4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a post",
+              "fullTitle": "Create and mark-unmark as favorite Create a post",
+              "timedOut": null,
+              "duration": 3893,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('New Post').click();\ncy.hash().should('include', '#/editor'); //cy.location('hash').should('include','#/editor')\ncy.get('input[placeholder=\"Article Title\"]').type('Cypress Automation'); // cy.get('input[placeholder=\"Article Title\"]').type('Cypress Automation'+ Math.random()*6)\ncy.get('input[placeholder=\"What\\'s this article about?\"]').type('Cypress Test Automation');\ncy.get('textarea[placeholder=\"Write your article (in markdown)\"]').type('Cypress Test Automation for Web');\ncy.contains('Publish Article').click();\ncy.url().should('include', 'article');",
+              "err": {},
+              "uuid": "53e07d41-f720-4748-b4ff-196e7c6330f2",
+              "parentUUID": "5314c24d-8233-48e0-9b0f-b7a713f22a4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mark & unmark as favorite",
+              "fullTitle": "Create and mark-unmark as favorite Mark & unmark as favorite",
+              "timedOut": null,
+              "duration": 7720,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.nav-link').contains('manjunatha2207').click();\ncy.contains('My Articles').should('be.visible');\ncy.get('.ion-heart').click();\ncy.contains('Favorited Articles').click();\ncy.url().should('include', 'favorites');\ncy.get('.ion-heart').click();\ncy.reload();\ncy.contains('No articles are here... yet.').should('be.visible');\ncy.go('back'); //cy.go(-1)\n//cy.go('forward')\n//cy.go(1)\n// cy.get('.preview-link > span').click()\n// cy.get('.btn-outline-danger').click()",
+              "err": {},
+              "uuid": "11287dc2-0fd6-409a-a9fd-6900594ee20a",
+              "parentUUID": "5314c24d-8233-48e0-9b0f-b7a713f22a4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "570388a9-2921-4e12-b647-1b0babd08409",
+            "53e07d41-f720-4748-b4ff-196e7c6330f2",
+            "11287dc2-0fd6-409a-a9fd-6900594ee20a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19382,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dd91c218-dd89-4987-94ce-37e41f614294",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite01/tc03-spec.js",
+      "file": "cypress/integration/testSuite01/tc03-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a9fbd756-dca5-4c2f-8c3a-60d374f0805b",
+          "title": "Create and mark-unmark as favorite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a post",
+              "fullTitle": "Create and mark-unmark as favorite Create a post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "190104be-e2b8-407b-891d-4822ca092fbf",
+              "parentUUID": "a9fbd756-dca5-4c2f-8c3a-60d374f0805b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mark & unmark as favorite",
+              "fullTitle": "Create and mark-unmark as favorite Mark & unmark as favorite",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "39a8fff9-3bba-4e43-add7-bfc9e1085b69",
+              "parentUUID": "a9fbd756-dca5-4c2f-8c3a-60d374f0805b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "190104be-e2b8-407b-891d-4822ca092fbf",
+            "39a8fff9-3bba-4e43-add7-bfc9e1085b69"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8c6bfaf3-1400-4a39-893b-2a1069483c5f",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite01/tc04-spec.js",
+      "file": "cypress/integration/testSuite01/tc04-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4230192d-2b9e-45c5-8300-c6c27b1fcc93",
+          "title": "Create and mark-unmark as favorite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a post",
+              "fullTitle": "Create and mark-unmark as favorite Create a post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f8599d4f-77e6-41ac-9442-39d44389c6f2",
+              "parentUUID": "4230192d-2b9e-45c5-8300-c6c27b1fcc93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mark & unmark as favorite",
+              "fullTitle": "Create and mark-unmark as favorite Mark & unmark as favorite",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a3ba0efb-6bbb-4192-9e1e-99f1b6cf83a3",
+              "parentUUID": "4230192d-2b9e-45c5-8300-c6c27b1fcc93",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "f8599d4f-77e6-41ac-9442-39d44389c6f2",
+            "a3ba0efb-6bbb-4192-9e1e-99f1b6cf83a3"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0f870838-0466-49a6-a040-fab7bffa4d2a",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite01/tc05-spec.js",
+      "file": "cypress/integration/testSuite01/tc05-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4406c4a7-9881-4384-b88e-2f405432ffcb",
+          "title": "cypress-file-upload plugin",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File upload",
+              "fullTitle": "cypress-file-upload plugin File upload",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "7cad4941-cc94-4ecf-be6f-7b1d123c5aa4",
+              "parentUUID": "4406c4a7-9881-4384-b88e-2f405432ffcb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "7cad4941-cc94-4ecf-be6f-7b1d123c5aa4"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "361efd1f-646f-4712-9f7b-6eb4f8c940a2",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite01/tc01-spec.js",
+      "file": "cypress/integration/testSuite01/tc01-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "97618460-e771-4e34-a9cd-959cba3af4a5",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "signin",
+              "fullTitle": "Login signin",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "564f8f2c-55a4-4c31-a201-2db437b1c758",
+              "parentUUID": "97618460-e771-4e34-a9cd-959cba3af4a5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "564f8f2c-55a4-4c31-a201-2db437b1c758"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
