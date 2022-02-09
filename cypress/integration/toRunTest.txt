@@ -1,0 +1,21 @@
+CLI  - Command Line Interface 
+
+//Run test through Cypress TestRunner
+npx cypress open
+node_modules\.bin\cypress open
+
+//Run tests in headless mode (Note: all test cases will from integration folder)
+npx cypress run            
+
+//Run specific test
+npx cypress run --spec cypress\integration\testSuite02\ts01-viewPortTests.js
+
+//Run all test cases from specific folder
+npx cypress run --spec cypress\integration\testSuite02\*.js
+
+//headless tests runs in Electron browser by default
+
+//Run tests in specific browser
+npx cypress run --spec cypress\integration\testSuite02\ts01-viewPortTests.js --browser chrome --headed
+
+

@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-09T10:10:24.603Z",
+    "end": "2022-02-09T10:10:45.489Z",
+    "duration": 20886,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "76d6d66a-fdb2-48d6-b4af-77c474c5d7a8",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite02/ts01-viewPortTests.js",
+      "file": "cypress/integration/testSuite02/ts01-viewPortTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+          "title": "view ports: Control the size & orientation of the APP screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test01: open tests in macbook-16",
+              "fullTitle": "view ports: Control the size & orientation of the APP screen test01: open tests in macbook-16",
+              "timedOut": null,
+              "duration": 4494,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('macbook-16');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "2f043efc-325e-48de-9159-8b8421d7e3ec",
+              "parentUUID": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test02: open tests in ipad-2",
+              "fullTitle": "view ports: Control the size & orientation of the APP screen test02: open tests in ipad-2",
+              "timedOut": null,
+              "duration": 3312,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('ipad-2');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "0a57b257-2d03-4223-a275-6d4ebca4f8a2",
+              "parentUUID": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test03: open tests in iphone-xr",
+              "fullTitle": "view ports: Control the size & orientation of the APP screen test03: open tests in iphone-xr",
+              "timedOut": null,
+              "duration": 3632,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-xr');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "5da8f292-e629-4ee8-9249-b05a9b708a3e",
+              "parentUUID": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test04: open tests in 1024px x 768px",
+              "fullTitle": "view ports: Control the size & orientation of the APP screen test04: open tests in 1024px x 768px",
+              "timedOut": null,
+              "duration": 3390,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1024, 768);\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "808a8bd0-7283-4729-b8b8-d47766d8dc8e",
+              "parentUUID": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "test04: open tests in samsung-note9",
+              "fullTitle": "view ports: Control the size & orientation of the APP screen test04: open tests in samsung-note9",
+              "timedOut": null,
+              "duration": 3800,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('samsung-note9');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "3a69ffcd-a428-49d9-a20d-8e76c9b37aba",
+              "parentUUID": "ea4347b6-bc6b-42e6-beb6-66bd826daf53",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2f043efc-325e-48de-9159-8b8421d7e3ec",
+            "0a57b257-2d03-4223-a275-6d4ebca4f8a2",
+            "5da8f292-e629-4ee8-9249-b05a9b708a3e",
+            "808a8bd0-7283-4729-b8b8-d47766d8dc8e",
+            "3a69ffcd-a428-49d9-a20d-8e76c9b37aba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18628,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
