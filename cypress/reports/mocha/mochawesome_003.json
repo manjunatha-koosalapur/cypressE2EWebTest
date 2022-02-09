@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-07T08:50:20.698Z",
+    "end": "2022-02-07T08:50:26.146Z",
+    "duration": 5448,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f15183fa-7b3b-4da9-b240-0743a467e199",
+      "title": "",
+      "fullFile": "cypress/integration/testSuite/ts01_signIn-spec.js",
+      "file": "cypress/integration/testSuite/ts01_signIn-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b854a58-055c-44d8-861f-5292bcce493a",
+          "title": "Sign In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test01: sign in",
+              "fullTitle": "Sign In test01: sign in",
+              "timedOut": null,
+              "duration": 5392,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://react-redux.realworld.io/#/login\");\ncy.get('input[type=\"email\"]').type('manjunatha2207@gmail.com');\ncy.get('input[type=\"password\"]').type('Cypress@1234');\ncy.get('.btn').contains('Sign in').should('be.visible').click();\ncy.contains('manjunatha2207').should('be.visible');\ncy.contains('Your Feed').should('be.visible');",
+              "err": {},
+              "uuid": "275b97ed-493c-402c-a797-9a534703498d",
+              "parentUUID": "2b854a58-055c-44d8-861f-5292bcce493a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "275b97ed-493c-402c-a797-9a534703498d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5392,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
