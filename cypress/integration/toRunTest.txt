@@ -19,3 +19,23 @@ npx cypress run --spec cypress\integration\testSuite02\*.js
 npx cypress run --spec cypress\integration\testSuite02\ts01-viewPortTests.js --browser chrome --headed
 
 
+//to handle Service Unavailable in Cypress
+{failOnStatusCode: false})   refer ts02-LEVY Health.js
+
+
+//to handle Uncaught Exception in Cypress
+Add this in support > index.js file
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false
+})
+
+//to get Cypress IntelliSense or Auto Suggestions in Visual Studio Code 
+add this in jsconfig.json
+{
+    "include": [
+      "./node_modules/cypress",
+      "cypress/**/*.js"
+    ]
+}
