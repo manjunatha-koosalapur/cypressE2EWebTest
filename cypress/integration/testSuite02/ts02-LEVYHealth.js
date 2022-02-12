@@ -2,27 +2,29 @@
 
 describe('LEVY Health tests', function() {
 
-    it.skip('test01: LEVY home page', ()=> {
+    it('test01: LEVY home page', ()=> {
         cy.visit('https://www.levy.health/en/',{failOnStatusCode: false})  //failOnStatusCode is to Handle Service Unavailable and Uncaught Exception in Cypress
         cy.url().should('include','levy.health/en')
         cy.title().should('contains','Levy Health')
         cy.get('#menu-item-wpml-ls-15-de > a > .wpml-ls-native').click()
         cy.url().should('include','levy.health')
+        cy.wait(4000)
     })
 
-    it.skip('test02: our science', ()=> {
+    it('test02: our science', ()=> {
         cy.visit('https://www.levy.health/en/')
         cy.get('#menu-main-menu-en-1 > .menu-item-564 > a').click()
         cy.url().should('include','levy.health/en/our-science/')
         cy.contains('LEVY Fertility Code').should('be.visible')
-        cy.contains('The algorithm creates your personal risk profile').should('be.visible')
+        cy.contains('The algorithm creates your personal risk profile').click()
         cy.contains('Individualized blood diagnostics').click()
         cy.contains('You receive your results and discuss them with our reproductive physicians').should('be.visible')
         cy.contains('We accompany you holistically').click()
+        cy.wait(4000)
 
     })
 
-    it.skip('test03: team', ()=> {
+    it('test03: team', ()=> {
         cy.visit('https://www.levy.health/en/')
         cy.get('#menu-main-menu-en-1 > .menu-item-563 > a').click()
         cy.url().should('include','levy.health/en/team/')
@@ -31,10 +33,11 @@ describe('LEVY Health tests', function() {
         cy.contains('SILVIA HECHER').should('be.visible')
         cy.contains('THERESA VILSMAIER').should('be.visible')
         cy.contains('SCOTT ENGLAND')
+        cy.wait(6000)
 
     })
 
-    it.skip('test04: blog', ()=> {
+    it('test04: blog', ()=> {
         cy.visit('https://www.levy.health/en/')
         cy.get('#menu-main-menu-en-1 > .menu-item-3391 > a').click()
         cy.url().should('include','levy.health/en/blog/')
@@ -42,6 +45,7 @@ describe('LEVY Health tests', function() {
         // cy.contains('KNOWLEDGE').should('be.visible')
         // cy.contains('STORIES').should('be.visible')
         // cy.get('.blog-search-form > input').contains('search')
+        cy.wait(4000)
         
     })
 
@@ -53,6 +57,20 @@ describe('LEVY Health tests', function() {
         cy.contains('hello@levy.health').should('be.visible')
         // cy.contains('STORIES').should('be.visible')
         // cy.get('.blog-search-form > input').contains('search')
+        cy.wait(4000)
+        
+    })
+
+    it('test06: login', ()=> {
+        cy.visit('https://www.levy.health/en/')
+        cy.get('#menu-main-menu-en-1 > .menu-item-type-custom > a').click()
+        cy.url().should('include','your.levy.health/auth/register')
+        cy.get('.picker > :nth-child(2)').click()
+        cy.contains('Sign up to LEVY').should('be.visible')
+        cy.contains('Already a member? Log in').should('be.visible')
+        cy.contains('I agree to the Terms and Conditions and Data Privacy Policy').should('be.visible')
+        cy.contains('Sign up to LEVY').should('be.visible')
+        cy.wait(4000)
         
     })
 
