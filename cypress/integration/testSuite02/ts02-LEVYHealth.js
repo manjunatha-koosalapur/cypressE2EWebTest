@@ -70,3 +70,31 @@ describe('LEVY Health tests', function() {
     })
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//npx cypress run --spec cypress\integration\testSuite02\ts02-LEVYHealth.js --browser chrome --headed
