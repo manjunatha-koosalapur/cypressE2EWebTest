@@ -42,9 +42,6 @@ describe('LEVY Health tests', function() {
         cy.get('#menu-main-menu-en-1 > .menu-item-3391 > a').click()
         cy.url().should('include','levy.health/en/blog/')
         cy.contains('LEVY Blog').should('be.visible')
-        // cy.contains('KNOWLEDGE').should('be.visible')
-        // cy.contains('STORIES').should('be.visible')
-        // cy.get('.blog-search-form > input').contains('search')
         cy.wait(4000)
         
     })
@@ -55,8 +52,6 @@ describe('LEVY Health tests', function() {
         cy.url().should('include','levy.health/en/contact/')
         cy.contains('Contact Us').should('be.visible')
         cy.contains('hello@levy.health').should('be.visible')
-        // cy.contains('STORIES').should('be.visible')
-        // cy.get('.blog-search-form > input').contains('search')
         cy.wait(4000)
         
     })
