@@ -39,3 +39,9 @@ add this in jsconfig.json
       "cypress/**/*.js"
     ]
 }
+
+
+//npx cypress run --spec cypress\integration\testSuite02\ts02-LEVYHealth.js --browser chrome --headed
+
+//npx cypress run --spec cypress\integration\testSuite03\ts01-PXR.js --browser chrome --headed
+

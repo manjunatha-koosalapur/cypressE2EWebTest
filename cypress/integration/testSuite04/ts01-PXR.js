@@ -73,28 +73,4 @@ describe('PXR tech enabled law firm  - a lawtech company', function() {
         cy.wait(2000)
 
     })
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//npx cypress run --spec cypress\integration\testSuite03\ts01-PXR.js --browser chrome --headed

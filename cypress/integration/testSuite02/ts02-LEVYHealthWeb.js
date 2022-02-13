@@ -2,12 +2,17 @@
 
 describe('LEVY Health tests', function() {
 
-    it('test01: LEVY home page', ()=> {
+    it.only('test01: LEVY home page', ()=> {
         cy.visit('https://www.levy.health/en/',{failOnStatusCode: false})  //failOnStatusCode is to Handle Service Unavailable and Uncaught Exception in Cypress
         cy.url().should('include','levy.health/en')
         cy.title().should('contains','Levy Health')
         cy.get('#menu-item-wpml-ls-15-de > a > .wpml-ls-native').click()
         cy.url().should('include','levy.health')
+        cy.get('#menu-item-wpml-ls-15-en > a > .wpml-ls-native').click()
+        cy.contains('Medical Fertility Analysis').should('be.visible')
+        cy.contains('Individualized Blood Diagnostics').should('be.visible')
+        cy.contains('Diagnosis and further steps').should('be.visible')
+        cy.get('.footer-section-top').should('have.length',11)
         cy.wait(4000)
     })
 
